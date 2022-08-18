@@ -4,3 +4,8 @@ services:
     command: ['--id', 'Joibel/loomly-tag']
     volumes:
       - ".:/plugin:ro"
+  shellcheck:
+    image: koalaman/shellcheck
+    command: ['/plugin/hooks/pre-command']
+    volumes:
+      - ".:/plugin:ro"

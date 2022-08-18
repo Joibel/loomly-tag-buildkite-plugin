@@ -1,7 +1,9 @@
 #!/bin/bash
 
 set -xeuo pipefail
-export BRANCH_TAG=`echo "${BUILDKITE_BRANCH}" \
+BRANCH_TAG=$(echo "${BUILDKITE_BRANCH}" \
 	  | tr '[:upper:]' '[:lower:]' \
-      | sed -r 's/[_.\/]+/-/g'`;
-export REVISION_TAG=`git rev-parse --short HEAD`;
+      | sed -r 's/[_.\/]+/-/g');
+REVISION_TAG=$(git rev-parse --short HEAD);
+export BRANCH_TAG
+export REVISION_TAG
