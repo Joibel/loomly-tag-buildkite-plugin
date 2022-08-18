@@ -1,0 +1,7 @@
+name: Loomly tags
+description: Gets the revision and tag for a build
+author: https://github.com/Joibel
+requirements: ['git']
+configuration:
+  properties: {}
+  additionalProperties: false
